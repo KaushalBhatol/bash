@@ -1,0 +1,28 @@
+#!/bin/bash
+
+clear
+lines="----------------------------------------------------------"
+#discription how to use
+echo "     THIS IS Folder Removel script  "
+
+printf " \n How To Use : \n"
+echo "note:  this script also remove containig folder so choose wisly"
+echo "   1. just put folder name"
+echo "   2. for multiple folder remove just drop space between folder name"
+echo "      ex: folder1 folder2  "
+
+# listing folder directorys
+echo "$lines"
+printf "List of folder on your current directory \n\n"
+ls -d */
+echo "$lines"
+# gatting input from user
+printf "\n \t Which folder you want to remove ?\n\n folder : "
+read dir
+# removing folders 
+rm -r $dir
+
+# exit from program
+echo ""
+echo "$dir is succesfully removed"
+echo "Thank You "
